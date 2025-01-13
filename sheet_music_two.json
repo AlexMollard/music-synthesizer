@@ -1,331 +1,69 @@
 {
     "metadata": {
-        "loops": 4,
-        "tempo": 110
+      "tempo": 76,
+      "loops": 8
     },
     "sections": [
-        {
-            "name": "intro",
-            "repeat": false,
-            "tracks": [
-                {
-                    "instrument": "synth",
-                    "notes": [
-                        {
-                            "pitch": "C4",
-                            "duration": 500,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 500,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "G4",
-                            "duration": 500,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "B4",
-                            "duration": 500,
-                            "volume": 0.6
-                        }
-                    ]
-                },
-                {
-                    "instrument": "pad",
-                    "notes": [
-                        {
-                            "pitch": "C3",
-                            "duration": 2000,
-                            "volume": 0.3
-                        },
-                        {
-                            "pitch": "A3",
-                            "duration": 2000,
-                            "volume": 0.3
-                        }
-                    ]
-                }
+      {
+        "name": "Chorus",
+        "repeat": false,
+        "tracks": [
+          {
+            "instrument": "guitar",
+            "notes": [
+              {
+                "pitch": "G4",
+                "duration": 195,
+                "volume": 0.9
+              }
             ]
-        },
-        {
-            "name": "verse",
-            "repeat": true,
-            "tracks": [
-                {
-                    "instrument": "guitar",
-                    "notes": [
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "D3",
-                                    "duration": 250,
-                                    "volume": 0.6
-                                },
-                                {
-                                    "pitch": "F3",
-                                    "duration": 250,
-                                    "volume": 0.6
-                                },
-                                {
-                                    "pitch": "A3",
-                                    "duration": 250,
-                                    "volume": 0.6
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "E3",
-                                    "duration": 250,
-                                    "volume": 0.6
-                                },
-                                {
-                                    "pitch": "G3",
-                                    "duration": 250,
-                                    "volume": 0.6
-                                },
-                                {
-                                    "pitch": "B3",
-                                    "duration": 250,
-                                    "volume": 0.6
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "piano",
-                    "notes": [
-                        {
-                            "pitch": "D4",
-                            "duration": 250,
-                            "volume": 0.7
-                        },
-                        {
-                            "pitch": "F4",
-                            "duration": 250,
-                            "volume": 0.7
-                        },
-                        {
-                            "pitch": "A4",
-                            "duration": 250,
-                            "volume": 0.7
-                        },
-                        {
-                            "pitch": "C5",
-                            "duration": 250,
-                            "volume": 0.7
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 500,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "bass",
-                    "notes": [
-                        {
-                            "pitch": "D2",
-                            "duration": 250,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "E2",
-                            "duration": 250,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "A2",
-                            "duration": 250,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "drums",
-                    "notes": [
-                        {
-                            "pitch": "kick",
-                            "duration": 250,
-                            "volume": 0.8
-                        },
-                        {
-                            "pitch": "snare",
-                            "duration": 250,
-                            "volume": 0.7
-                        },
-                        {
-                            "pitch": "kick",
-                            "duration": 250,
-                            "volume": 0.8
-                        },
-                        {
-                            "pitch": "snare",
-                            "duration": 250,
-                            "volume": 0.7
-                        }
-                    ]
-                }
+          },
+          {
+            "instrument": "synth",
+            "notes": [
+              {
+                "pitch": "B4",
+                "duration": 424,
+                "volume": 0.5
+              },
+              {
+                "pitch": "F4",
+                "duration": 191,
+                "volume": 0.6
+              }
             ]
-        },
-        {
-            "name": "chorus",
-            "repeat": true,
-            "tracks": [
-                {
-                    "instrument": "synth",
-                    "notes": [
-                        {
-                            "pitch": "C4",
-                            "duration": 500,
-                            "volume": 0.8
-                        },
-                        {
-                            "pitch": "F4",
-                            "duration": 500,
-                            "volume": 0.8
-                        },
-                        {
-                            "pitch": "A4",
-                            "duration": 500,
-                            "volume": 0.8
-                        },
-                        {
-                            "pitch": "C5",
-                            "duration": 500,
-                            "volume": 0.8
-                        }
-                    ]
-                },
-                {
-                    "instrument": "guitar",
-                    "notes": [
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "C3",
-                                    "duration": 250,
-                                    "volume": 0.7
-                                },
-                                {
-                                    "pitch": "E3",
-                                    "duration": 250,
-                                    "volume": 0.7
-                                },
-                                {
-                                    "pitch": "G3",
-                                    "duration": 250,
-                                    "volume": 0.7
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "F3",
-                                    "duration": 250,
-                                    "volume": 0.7
-                                },
-                                {
-                                    "pitch": "A3",
-                                    "duration": 250,
-                                    "volume": 0.7
-                                },
-                                {
-                                    "pitch": "C4",
-                                    "duration": 250,
-                                    "volume": 0.7
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "bass",
-                    "notes": [
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "F2",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "G2",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "drums",
-                    "notes": [
-                        {
-                            "pitch": "kick",
-                            "duration": 250,
-                            "volume": 0.9
-                        },
-                        {
-                            "pitch": "snare",
-                            "duration": 250,
-                            "volume": 0.8
-                        },
-                        {
-                            "pitch": "kick",
-                            "duration": 250,
-                            "volume": 0.9
-                        },
-                        {
-                            "pitch": "snare",
-                            "duration": 250,
-                            "volume": 0.8
-                        }
-                    ]
-                }
+          },
+          {
+            "instrument": "piano",
+            "notes": [
+              {
+                "pitch": "E4",
+                "duration": 103,
+                "volume": 0
+              },
+              {
+                "pitch": "C4",
+                "duration": 344,
+                "volume": 0.6
+              }
             ]
-        }
+          },
+          {
+            "instrument": "bass",
+            "notes": [
+              {
+                "pitch": "A4",
+                "duration": 361,
+                "volume": 0.3
+              },
+              {
+                "pitch": "D4",
+                "duration": 308,
+                "volume": 0
+              }
+            ]
+          }
+        ]
+      }
     ]
-}
+  }

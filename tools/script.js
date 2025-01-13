@@ -65,7 +65,6 @@ function displaySections() {
     Prism.highlightAll();  // Apply syntax highlighting
 }
 
-
 function clearCurrentSectionNotes() {
     currentSectionNotes = {};  // Reset the current section notes
     document.getElementById("notesList").textContent = '';
@@ -89,4 +88,46 @@ function downloadJSON() {
     link.href = url;
     link.download = "music.json";
     link.click();
+}
+
+// Function to generate random song data
+// Function to generate random song data
+function generateRandomSong() {
+    const randomInstruments = ["guitar", "piano", "bass", "synth"];
+    const randomNotes = ["C4", "D4", "E4", "F4", "G4", "A4", "B4"];
+    const randomTempo = Math.floor(Math.random() * (300 - 30 + 1)) + 30;
+    const randomLoops = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    
+    // Set random metadata
+    document.getElementById("tempo").value = randomTempo;
+    document.getElementById("loops").value = randomLoops;
+
+    // Generate a random section with notes
+    const randomSectionName = ["Verse", "Chorus", "Bridge", "Outro"][Math.floor(Math.random() * 4)];
+    const randomRepeat = Math.random() > 0.5;
+    document.getElementById("sectionName").value = randomSectionName;
+    document.getElementById("repeat").value = randomRepeat ? "true" : "false";
+
+    // Generate random notes for current section
+    currentSectionNotes = {};
+    const numNotes = Math.floor(Math.random() * 5) + 3;  // Random number of notes between 3 and 7
+    for (let i = 0; i < numNotes; i++) {
+        const randomInstrument = randomInstruments[Math.floor(Math.random() * randomInstruments.length)];
+        const randomNote = randomNotes[Math.floor(Math.random() * randomNotes.length)];
+        const randomDuration = Math.floor(Math.random() * (500 - 100 + 1)) + 100; // Random duration between 100ms and 500ms
+        const randomVolume = parseFloat((Math.random()).toFixed(1));  // Ensure volume is a float (0.0 to 1.0)
+        const newNote = {
+            pitch: randomNote,
+            duration: randomDuration,
+            volume: randomVolume
+        };
+
+        if (!currentSectionNotes[randomInstrument]) {
+            currentSectionNotes[randomInstrument] = [];
+        }
+        currentSectionNotes[randomInstrument].push(newNote);
+    }
+
+    // Display generated section and notes
+    addSection();
 }
