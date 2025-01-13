@@ -30,20 +30,17 @@ pip install keyboard       # For playback controls
 The script provides several command-line options for generating and playing music:
 
 ```bash
-# Basic usage (generate music from JSON)
-python synthesizer.py your_music.json
+# List available instruments
+python main.py --list-instruments
 
-# Generate and play immediately
-python synthesizer.py your_music.json --play
+# Generate and play a song
+python main.py example_song.json --play
 
-# Specify custom output file
-python synthesizer.py your_music.json -o custom_output.wav
+# Generate a song with custom output path
+python main.py example_song.json -o my_song.wav
 
-# Override number of loops defined in JSON
-python synthesizer.py your_music.json --loops 3
-
-# Combine multiple options
-python synthesizer.py your_music.json --play --loops 2 -o my_song.wav
+# Override number of loops
+python main.py example_song.json --loops 3
 ```
 
 ### Command Line Arguments
