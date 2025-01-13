@@ -144,34 +144,34 @@ The JSON file supports both a simple tracks array and a more advanced sectional 
 The script supports these instrument types, each with specific characteristics:
 
 ### Melody Instruments
-- `piano`: Complex timbre with harmonics
+- **`piano`**: Complex timbre with harmonics
   - Best used for: Main melodies, complex musical phrases
   - Volume range: 0.6-0.7
   - Optimal octaves: 4-5
 
-- `xylophone`: Bright, short sounds
+- **`xylophone`**: Bright, short sounds
   - Best used for: Counter-melodies, accents
   - Volume range: 0.5-0.7
   - Optimal octaves: 4-5
 
 ### Accompaniment Instruments
-- `bass`: Deep, sustained tones (Electric bass sound)
+- **`bass`**: Deep, sustained tones (Electric bass sound)
   - Best used for: Bass lines, foundational harmony
   - Volume range: 0.3-0.5
   - Optimal octaves: 2-3
 
-- `guitar`: Balanced string sound (Acoustic guitar sound)
+- **`guitar`**: Balanced string sound (Acoustic guitar sound)
   - Best used for: Chords, arpeggios
   - Volume range: 0.4-0.6
   - Optimal octaves: 3-4
 
 ### Percussion Instruments
-- `bongos`: Resonant percussion
+- **`bongos`**: Resonant percussion
   - Best used for: Rhythmic patterns
   - Volume range: 0.3-0.4
   - Uses C2 for all notes
 
-- `claves`: Short, sharp clicks
+- **`claves`**: Short, sharp clicks
   - Best used for: Accent beats
   - Volume range: 0.3-0.4
   - Uses C2 for all notes
@@ -306,10 +306,10 @@ C5, D5, E5, F5, G5, A5, B5, Bb5, Eb5
 4. Create contrast between sections
 
 ### Common Issues and Solutions
-1. Overly loud bass: Keep bass volume below 0.5
-2. Muddy mix: Space out note ranges between instruments
-3. Timing issues: Ensure note durations sum equally across tracks
-4. Harsh sound: Keep all volumes below 0.9
+1. **Overly loud bass**: Keep bass volume below 0.5
+2. **Muddy mix**: Space out note ranges between instruments
+3. **Timing issues**: Ensure note durations sum equally across tracks
+4. **Harsh sound**: Keep all volumes below 0.9
 
 ## Complete Example
 
@@ -380,27 +380,27 @@ C5, D5, E5, F5, G5, A5, B5, Bb5, Eb5
 
 ### Section Types
 Common section names and their typical characteristics:
-1. `verse`: Main narrative section
+1. **`verse`**: Main narrative section
    - Usually simpler arrangement
    - Supports lyrical content
    - Often uses basic chord progressions
 
-2. `chorus`: High-energy section
+2. **`chorus`**: High-energy section
    - Fuller arrangement
    - More prominent melody
    - Often uses stronger chord progressions
 
-3. `bridge`: Contrasting section
+3. **`bridge`**: Contrasting section
    - Different chord progression
    - Often introduces new melodic elements
    - Can modulate to different key
 
-4. `intro`: Opening section
+4. **`intro`**: Opening section
    - Gradually builds instruments
    - Sets up main themes
    - Often simplified arrangement
 
-5. `outro`: Closing section
+5. **`outro`**: Closing section
    - Gradually reduces instruments
    - May reprise main themes
    - Often includes fadeout effect
