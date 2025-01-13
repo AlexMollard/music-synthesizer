@@ -2,11 +2,11 @@ import json
 from typing import List, Union, Dict
 from pydub import AudioSegment
 
-from ..core.notes import Note, Chord
-from ..core.audio_utils import generate_instrument_tone, mix_audio
-from ..effects.envelope import apply_enhanced_envelope
-from ..core.constants import NOTE_FREQUENCIES
-from ..core.instruments import Instrument
+from core.notes import Note, Chord
+from core.audio_utils import generate_instrument_tone, mix_audio
+from effects.envelope import apply_enhanced_envelope
+from core.constants import NOTE_FREQUENCIES
+from core.instruments import Instrument
 
 def parse_sheet_music(sheet_music):
     """Parse sheet music with enhanced mixing, effects, and section support"""
