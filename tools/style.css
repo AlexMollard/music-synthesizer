@@ -1,0 +1,110 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282828; /* Dark background color for Gruvbox */
+    color: #ebdbb2; /* Light beige text for better contrast */
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #d79921; /* Yellow-orange color for header */
+}
+
+/* Main Section */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3c3836; /* Darker background for main content */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8ec07c; /* Soft green color for section titles */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fabd2f; /* Warm yellow-orange for labels */
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #928374; /* Soft brownish-grey border */
+    border-radius: 4px;
+    background-color: #3c3836; /* Dark input field background */
+    color: #ebdbb2; /* Light beige text */
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d79921; /* Gruvbox-inspired yellow */
+    color: #282828; /* Dark text on the yellow background */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #fabd2f; /* Lighter yellow for hover effect */
+}
+
+/* Notes and Sections List */
+pre {
+    background-color: #504945; /* Dark greyish-brown background for preformatted text */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #ebdbb2; /* Light beige text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
