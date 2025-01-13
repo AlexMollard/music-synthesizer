@@ -1,3 +1,97 @@
+# Installation and Setup
+
+## Required Dependencies
+Install the following Python packages using pip:
+```bash
+pip install numpy           # For numerical operations
+pip install pydub          # For audio processing
+pip install keyboard       # For playback controls
+```
+
+## Additional Requirements
+1. Audio playback requires a working audio output device
+2. For WAV file export, ensure you have sufficient disk space
+3. Python 3.7 or higher is recommended
+
+## Installation Steps
+1. Clone or download the synthesizer script
+2. Open a terminal/command prompt
+3. Navigate to the script directory
+4. Install dependencies:
+   ```bash
+   pip install numpy pydub keyboard
+   ```
+5. Test installation:
+   ```bash
+   python synthesizer.py --help
+   ```
+
+## Running the Script
+The script provides several command-line options for generating and playing music:
+
+```bash
+# Basic usage (generate music from JSON)
+python synthesizer.py your_music.json
+
+# Generate and play immediately
+python synthesizer.py your_music.json --play
+
+# Specify custom output file
+python synthesizer.py your_music.json -o custom_output.wav
+
+# Override number of loops defined in JSON
+python synthesizer.py your_music.json --loops 3
+
+# Combine multiple options
+python synthesizer.py your_music.json --play --loops 2 -o my_song.wav
+```
+
+### Command Line Arguments
+Required argument:
+- `json_file`: Path to your JSON music file
+
+Optional arguments:
+- `--output`, `-o`: Output WAV file path (default: output.wav)
+- `--play`, `-p`: Play the music after generating
+- `--loops`, `-l`: Override the number of loops specified in JSON
+- `--help`: Show help message
+
+### Example Usage Scenarios
+1. Quick test of a music file:
+   ```bash
+   python synthesizer.py test.json --play
+   ```
+
+2. Generate for distribution with 4 loops:
+   ```bash
+   python synthesizer.py song.json --loops 4 -o final_song.wav
+   ```
+
+3. Generate and immediately play with 2 loops:
+   ```bash
+   python synthesizer.py melody.json -p -l 2
+   ```
+
+### Playback Controls
+When using the --play option:
+- Press 'q' to stop playback
+- Press 'n' to skip to next loop
+
+
+### Troubleshooting
+1. If you get "command not found":
+   - Ensure Python is in your system PATH
+   - Try using `python3` instead of `python`
+
+2. If you get import errors:
+   - Verify all dependencies are installed
+   - Check Python version compatibility
+
+3. If there's no sound:
+   - Check system audio settings
+   - Verify audio output device is working
+   - Try generating WAV file first
+
 # Guide to Creating JSON Sheet Music Files
 
 ## Overview
