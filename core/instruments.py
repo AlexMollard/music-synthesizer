@@ -70,7 +70,20 @@ INSTRUMENTS_PARAMS = {
         'click_emphasis': True,
         'resonance_freq': [2400, 4800],
         'filter_q': 4.0
-    }
+    },
+    'ambient': {
+        'wave_type': ['sine', 'triangle', 'sine'],  # Added triangle wave for more warmth
+        'wave_mix': [0.5, 0.3, 0.2],  # Increased low-frequency wave proportion
+        'attack_ms': 15,  # Slightly longer attack for smoother entry
+        'decay_ms': 1200,  # Slightly longer decay
+        'sustain_level': 0.2,  # Increased sustain slightly
+        'release_ms': 1500,  # Longer release for more resonance
+        'octave_shift': -1,  # Shifted down an octave for deeper sound
+        'detune_cents': 7,  # Increased detune for more richness
+        'harmonics': [1.0, 0.7, 0.4, 0.2],  # Emphasized lower harmonics
+        'resonance_freq': [120, 240, 480]  # Lowered resonance frequencies
+    },
+    'none': {}
 }
 
 class Instrument:
@@ -109,5 +122,7 @@ AVAILABLE_INSTRUMENTS = {
     'piano': Instrument('piano'),
     'xylophone': Instrument('xylophone'),
     'bongos': Instrument('bongos'),
-    'claves': Instrument('claves')
+    'claves': Instrument('claves'),
+    'ambient': Instrument('ambient'),
+    'none': Instrument('none')
 }
