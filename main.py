@@ -9,7 +9,7 @@ from parsers.sheet_music import load_sheet_music_from_json, parse_sheet_music
 
 
 from core.notes import Note, Chord
-from core.audio_utils import generate_instrument_tone, mix_audio, play_with_loop
+from core.audio_utils import generate_instrument_tone, mix_audio, play_with_loop, convert_wav_to_mp3
 from effects.envelope import apply_enhanced_envelope
 from core.constants import NOTE_FREQUENCIES
 from core.instruments import Instrument, AVAILABLE_INSTRUMENTS
@@ -17,6 +17,7 @@ from core.instruments import Instrument, AVAILABLE_INSTRUMENTS
 import argparse
 import threading
 import keyboard
+import os
 
 def main():
     parser = argparse.ArgumentParser(description='Generate music from JSON sheet music')
@@ -49,9 +50,18 @@ def main():
 
         # Export with high-quality settings
         print(f"Exporting to {args.output}...")
-        melody.export(args.output, format="wav",
-                     parameters=["-ar", "44100", "-ab", "192k", "-ac", "2"])
+        melody.export(args.output, format="wav", parameters=["-ar", "44100", "-ab", "192k", "-ac", "2"])
         print("Successfully exported audio file")
+
+        # convert the wav to a mp3
+        print(f"Converting to {args.output.replace('.wav', '.mp3')}...")
+        convert_wav_to_mp3(args.output, args.output.replace('.wav', '.mp3'))
+        print("Successfully converted audio file")
+
+        # remove the old wav file
+        print(f"Removing {args.output}...")
+        os.remove(args.output)
+        print("Successfully removed audio file")
 
         if args.play:
             print("\nPlaying music...")

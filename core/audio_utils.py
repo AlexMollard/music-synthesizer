@@ -293,3 +293,8 @@ def play_with_loop(melody, stop_event=None, skip_event=None):
         if play_obj.is_playing():
             play_obj.stop()
         raise
+
+def convert_wav_to_mp3(wav_file, mp3_file):
+    """Convert WAV file to MP3 using pydub"""
+    audio = AudioSegment.from_wav(wav_file)
+    audio.export(mp3_file, format='mp3')
