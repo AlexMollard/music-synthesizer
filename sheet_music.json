@@ -1,529 +1,129 @@
 {
-    "metadata": {
-        "loops": 4,
-        "tempo": 120
-    },
-    "sections": [
+  "metadata": {
+    "tempo": 40,
+    "loops": 4
+  },
+  "sections": [
+    {
+      "name": "Ethereal Landscape",
+      "repeat": true,
+      "tracks": [
         {
-            "name": "verse",
-            "repeat": true,
-            "tracks": [
-                {
-                    "instrument": "guitar",
-                    "notes": [
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "C3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "E3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "G3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "C3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "E3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "G3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "G3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "B3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "D4",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "G3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "B3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "D4",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "A3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "C4",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "E4",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "A3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "C4",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "E4",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "F3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "A3",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                },
-                                {
-                                    "pitch": "C4",
-                                    "duration": 250,
-                                    "volume": 0.5
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "type": "chord",
-                            "notes": [
-                                {
-                                    "pitch": "F3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "A3",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                },
-                                {
-                                    "pitch": "C4",
-                                    "duration": 250,
-                                    "volume": 0.45
-                                }
-                            ]
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "piano",
-                    "notes": [
-                        {
-                            "pitch": "C4",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "G4",
-                            "duration": 250,
-                            "volume": 0.65
-                        },
-                        {
-                            "pitch": "A4",
-                            "duration": 250,
-                            "volume": 0.65
-                        },
-                        {
-                            "pitch": "G4",
-                            "duration": 500,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "D4",
-                            "duration": 250,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "C4",
-                            "duration": 125,
-                            "volume": 0.65
-                        },
-                        {
-                            "pitch": "D4",
-                            "duration": 125,
-                            "volume": 0.65
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 125,
-                            "volume": 0.65
-                        },
-                        {
-                            "pitch": "G4",
-                            "duration": 125,
-                            "volume": 0.65
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 500,
-                            "volume": 0.6
-                        },
-                        {
-                            "pitch": "C4",
-                            "duration": 500,
-                            "volume": 0.6
-                        }
-                    ]
-                },
-                {
-                    "instrument": "bass",
-                    "notes": [
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "G2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "G2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "G2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "G2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "A2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "A2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "A2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "A2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "F2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "F2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "F2",
-                            "duration": 125,
-                            "volume": 0.35
-                        },
-                        {
-                            "pitch": "F2",
-                            "duration": 250,
-                            "volume": 0.4
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "claves",
-                    "notes": [
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.3
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 125,
-                            "volume": 0.25
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 125,
-                            "volume": 0.25
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.3
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 125,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 125,
-                            "volume": 0.25
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.3
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 125,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 125,
-                            "volume": 0.25
-                        },
-                        {
-                            "pitch": "C2",
-                            "duration": 250,
-                            "volume": 0.3
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 250,
-                            "volume": 0.0
-                        }
-                    ]
-                },
-                {
-                    "instrument": "xylophone",
-                    "notes": [
-                        {
-                            "pitch": "REST",
-                            "duration": 500,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "G4",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "C4",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 125,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "D4",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "B3",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "G3",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 125,
-                            "volume": 0.0
-                        },
-                        {
-                            "pitch": "E4",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "C4",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "A3",
-                            "duration": 125,
-                            "volume": 0.5
-                        },
-                        {
-                            "pitch": "REST",
-                            "duration": 125,
-                            "volume": 0.0
-                        }
-                    ]
-                }
-            ]
+          "instrument": "ambient",
+          "notes": [
+            {
+              "pitch": "G3",
+              "duration": 3000,
+              "volume": 1
+            },
+            {
+              "pitch": "D4",
+              "duration": 3000,
+              "volume": 0.75
+            },
+            {
+              "pitch": "B3",
+              "duration": 3000,
+              "volume": 0.9
+            },
+            {
+              "pitch": "E4",
+              "duration": 3000,
+              "volume": 0.6
+            },
+            {
+              "pitch": "C4",
+              "duration": 3000,
+              "volume": 0.75
+            },
+            {
+              "pitch": "A3",
+              "duration": 3000,
+              "volume": 1
+            }
+          ]
+        },
+        {
+          "instrument": "bass",
+          "notes": [
+            {
+              "pitch": "G2",
+              "duration": 3000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "D3",
+              "duration": 3000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "B2",
+              "duration": 3000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "E3",
+              "duration": 3000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "C3",
+              "duration": 3000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "A2",
+              "duration": 3000,
+              "volume": 0.1
+            }
+          ]
+        },
+        {
+          "instrument": "synth",
+          "notes": [
+            {
+              "pitch": "G5",
+              "duration": 2000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "B5",
+              "duration": 2000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "B5",
+              "duration": 2500,
+              "volume": 0
+            },
+            {
+              "pitch": "D6",
+              "duration": 2000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "E5",
+              "duration": 2000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "B5",
+              "duration": 2500,
+              "volume": 0
+            },
+            {
+              "pitch": "C6",
+              "duration": 2000,
+              "volume": 0.1
+            },
+            {
+              "pitch": "A5",
+              "duration": 2000,
+              "volume": 0.1
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }
