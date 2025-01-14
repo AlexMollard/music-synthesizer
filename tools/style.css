@@ -1,110 +1,204 @@
-/* General Reset */
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #282828; /* Dark background color for Gruvbox */
-    color: #ebdbb2; /* Light beige text for better contrast */
-    padding: 20px;
+    background-color: #282828;
+    color: #ebdbb2;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
+    background-color: #3c3836;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #d79921;
     text-align: center;
-    margin-bottom: 40px;
-    color: #d79921; /* Yellow-orange color for header */
+    margin-bottom: 1rem;
 }
 
-/* Main Section */
+/* Main Layout */
 main {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #3c3836; /* Darker background for main content */
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Configuration Container */
+.config-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Preview Container */
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Sections */
+.config-section, .preview-section {
+    background-color: #3c3836;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Section Title */
+/* Section Headers */
 h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #8ec07c; /* Soft green color for section titles */
+    color: #8ec07c;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
 }
 
-/* Form Group */
+/* Form Groups */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.settings-group, .note-input-group, .section-input-group {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #fabd2f; /* Warm yellow-orange for labels */
+    margin-bottom: 0.5rem;
+    color: #fabd2f;
+    font-weight: 500;
 }
 
-/* Input Fields */
+/* Inputs */
 input, select {
     width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #928374; /* Soft brownish-grey border */
+    padding: 0.5rem;
+    border: 1px solid #504945;
     border-radius: 4px;
-    background-color: #3c3836; /* Dark input field background */
-    color: #ebdbb2; /* Light beige text */
+    background-color: #504945;
+    color: #ebdbb2;
+    font-size: 1rem;
 }
 
-input[type="number"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+input:focus, select:focus {
+    outline: none;
+    border-color: #fabd2f;
 }
 
 /* Buttons */
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #d79921; /* Gruvbox-inspired yellow */
-    color: #282828; /* Dark text on the yellow background */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #fabd2f; /* Lighter yellow for hover effect */
+.btn.primary {
+    background-color: #d79921;
+    color: #282828;
 }
 
-/* Notes and Sections List */
-pre {
-    background-color: #504945; /* Dark greyish-brown background for preformatted text */
-    padding: 10px;
+.btn.secondary {
+    background-color: #458588;
+    color: #ebdbb2;
+}
+
+.btn:hover {
+    filter: brightness(110%);
+}
+
+/* Generation Controls */
+.generation-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Preview Content */
+.preview-content {
+    background-color: #504945;
     border-radius: 4px;
-    font-size: 14px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    color: #ebdbb2; /* Light beige text */
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Copy Status */
+.copy-status {
+    color: #8ec07c;
+    font-size: 0.875rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.copy-status.visible {
+    opacity: 1;
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-container {
+        margin-top: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     main {
-        padding: 10px;
+        padding: 0 1rem;
     }
 
-    .form-group {
-        margin-bottom: 15px;
+    .generation-controls {
+        flex-direction: column;
     }
 
-    button {
-        width: 100%;
+    .button-group {
+        flex-direction: column;
     }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #504945;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #928374;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a89984;
 }

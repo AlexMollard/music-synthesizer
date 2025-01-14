@@ -1,3 +1,78 @@
+# Updated instrument parameters for better sound quality
+INSTRUMENTS_PARAMS = {
+    'electric_bass': {
+        'wave_type': ['sine', 'triangle', 'sine'],
+        'wave_mix': [0.5, 0.3, 0.2],
+        'attack_ms': 25,
+        'decay_ms': 200,
+        'sustain_level': 0.6,
+        'release_ms': 300,
+        'octave_shift': -1,
+        'detune_cents': 3,
+        'harmonics': [1.0, 0.5, 0.25, 0.125],
+        'body_resonance': True
+    },
+    'acoustic_guitar': {
+        'wave_type': ['triangle', 'sine', 'sine', 'square'],
+        'wave_mix': [0.45, 0.3, 0.2, 0.05],
+        'attack_ms': 15,
+        'decay_ms': 180,
+        'sustain_level': 0.4,
+        'release_ms': 250,
+        'octave_shift': 0,
+        'body_resonance': True,
+        'harmonics': [1.0, 0.6, 0.3, 0.15],
+        'detune_cents': 2
+    },
+    'piano': {
+        'wave_type': ['complex'],
+        'harmonics': [1.0, 0.6, 0.4, 0.25, 0.15, 0.1, 0.08],
+        'attack_ms': 8,
+        'decay_ms': 200,
+        'sustain_level': 0.35,
+        'release_ms': 300,
+        'octave_shift': 0,
+        'string_resonance': True,
+        'resonance_freq': [220, 440, 880],
+        'detune_cents': 1
+    },
+    'xylophone': {
+        'wave_type': ['sine', 'triangle', 'sine'],
+        'wave_mix': [0.5, 0.3, 0.2],
+        'attack_ms': 3,
+        'decay_ms': 300,
+        'sustain_level': 0.15,
+        'release_ms': 150,
+        'octave_shift': 1,
+        'bright_attack': True,
+        'harmonics': [1.0, 0.7, 0.4, 0.2],
+        'resonance_freq': [1200, 2400, 3600]
+    },
+    'bongos': {
+        'wave_type': ['noise', 'sine', 'sine'],
+        'wave_mix': [0.6, 0.25, 0.15],
+        'resonance_freq': [180, 360, 540],
+        'attack_ms': 3,
+        'decay_ms': 200,
+        'sustain_level': 0.08,
+        'release_ms': 180,
+        'filter_q': 3.5,
+        'body_resonance': True
+    },
+    'claves': {
+        'wave_type': ['sine', 'noise', 'sine'],
+        'wave_mix': [0.7, 0.15, 0.15],
+        'attack_ms': 2,
+        'decay_ms': 80,
+        'sustain_level': 0.04,
+        'release_ms': 80,
+        'octave_shift': 0,
+        'click_emphasis': True,
+        'resonance_freq': [2400, 4800],
+        'filter_q': 4.0
+    }
+}
+
 class Instrument:
     def __init__(self, name, attack_ms=10, decay_ms=10, sustain_level=0.7, release_ms=10):
         self.name = name
@@ -7,67 +82,7 @@ class Instrument:
         self.release_ms = release_ms
 
         # Define instrument-specific parameters
-        self.params = {
-            'electric_bass': {
-                'wave_type': ['sawtooth', 'sine'],
-                'wave_mix': [0.7, 0.3],
-                'attack_ms': 15,
-                'decay_ms': 150,
-                'sustain_level': 0.65,
-                'release_ms': 200,
-                'octave_shift': -1,
-                'detune_cents': 5
-            },
-            'acoustic_guitar': {
-                'wave_type': ['triangle', 'sine', 'square'],
-                'wave_mix': [0.6, 0.3, 0.1],
-                'attack_ms': 8,
-                'decay_ms': 100,
-                'sustain_level': 0.5,
-                'release_ms': 150,
-                'octave_shift': 0,
-                'body_resonance': True
-            },
-            'piano': {
-                'wave_type': ['complex'],
-                'harmonics': [1.0, 0.5, 0.33, 0.25, 0.2, 0.15],
-                'attack_ms': 5,
-                'decay_ms': 150,
-                'sustain_level': 0.4,
-                'release_ms': 200,
-                'octave_shift': 0,
-                'string_resonance': True
-            },
-            'xylophone': {
-                'wave_type': ['sine', 'triangle'],
-                'wave_mix': [0.8, 0.2],
-                'attack_ms': 2,
-                'decay_ms': 250,
-                'sustain_level': 0.2,
-                'release_ms': 100,
-                'octave_shift': 1,
-                'bright_attack': True
-            },
-            'bongos': {
-                'wave_type': ['noise'],
-                'resonance_freq': [200, 400],
-                'attack_ms': 2,
-                'decay_ms': 150,
-                'sustain_level': 0.1,
-                'release_ms': 150,
-                'filter_q': 2.5
-            },
-            'claves': {
-                'wave_type': ['sine', 'noise'],
-                'wave_mix': [0.9, 0.1],
-                'attack_ms': 1,
-                'decay_ms': 60,
-                'sustain_level': 0.05,
-                'release_ms': 60,
-                'octave_shift': 0,
-                'click_emphasis': True
-            }
-        }
+        self.params = INSTRUMENTS_PARAMS
 
         # Default attributes
         self.wave_type = 'sine'

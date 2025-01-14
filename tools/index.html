@@ -6,86 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music JSON Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link href="prism-gruvbox-dark.css" rel="stylesheet" />
+    <link href="prism-gruvbox-dark.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/components/prism-json.min.js"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Music JSON Generator</h1>
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <span id="copyStatus" class="copy-status"></span>
+        </div>
+        <div class="button-group">
+            <button class="btn" onclick="copyJSON()">Copy JSON</button>
+            <button class="btn" onclick="downloadJSON()">Download JSON</button>
+        </div>
+        <div class="button-group">
+            <button class="btn primary" onclick="generateRandomSong()">Generate Random Song</button>
+        </div>
     </header>
 
     <main>
-        <!-- Metadata Section -->
-        <section>
-            <h2>Metadata</h2>
-            <div class="form-group">
-                <label for="tempo">Tempo: </label>
-                <input type="number" id="tempo" value="120" min="30" max="300">
-            </div>
-            <div class="form-group">
-                <label for="loops">Loops: </label>
-                <input type="number" id="loops" value="4" min="1" max="10">
-            </div>
-        </section>
+        <!-- Left Column: Configuration -->
+        <div class="config-container">
+            <!-- Basic Settings -->
+            <section class="config-section">
+                <h2>Basic Settings</h2>
+                
+                <!-- Tempo and Loops -->
+                <div class="settings-group">
+                    <div class="form-group">
+                        <label for="tempo">Tempo (BPM):</label>
+                        <input type="number" id="tempo" value="120" min="30" max="300">
+                    </div>
+                    <div class="form-group">
+                        <label for="loops">Number of Loops:</label>
+                        <input type="number" id="loops" value="4" min="1" max="10">
+                    </div>
+                </div>
 
-        <!-- Note Input Section -->
-        <section>
-            <h2>Note Input</h2>
-            <div class="form-group">
-                <label for="instrument">Select Instrument: </label>
-                <select id="instrument">
-                    <option value="guitar">Guitar</option>
-                    <option value="piano">Piano</option>
-                    <option value="bass">Bass</option>
-                    <option value="synth">Synth</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="note">Select Note: </label>
-                <input type="text" id="note" placeholder="e.g., C4">
-            </div>
-            <div class="form-group">
-                <label for="duration">Duration (ms): </label>
-                <input type="number" id="duration" placeholder="e.g., 250">
-            </div>
-            <div class="form-group">
-                <label for="volume">Volume (0 to 1): </label>
-                <input type="number" id="volume" step="0.1" min="0" max="1" value="0.5">
-            </div>
-            <button class="btn" onclick="addNote()">Add Note</button>
-            <h3>Notes List for Current Section:</h3>
-            <pre id="notesList"></pre>
-        </section>
+                <!-- Genre Selection -->
+                <div class="form-group">
+                    <label for="genre">Music Genre:</label>
+                    <select id="genre">
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="classical">Classical</option>
+                        <option value="hiphop">Hip Hop</option>
+                        <option value="ambient">Ambient</option>
+                        <option value="funk">Funk</option>
+                    </select>
+                </div>
+            </section>
 
-        <!-- Section Section -->
-        <section>
-            <h2>Sections</h2>
-            <div class="form-group">
-                <label for="sectionName">Section Name: </label>
-                <input type="text" id="sectionName" placeholder="e.g., Verse">
-            </div>
-            <div class="form-group">
-                <label for="repeat">Repeat: </label>
-                <select id="repeat">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-            </div>
-            <button class="btn" onclick="addSection()">Add Section</button>
-            <h3>Sections List:</h3>
-            <pre id="sectionsList"></pre>
-        </section>
+            <!-- Manual Note Input -->
+            <section class="config-section">
+                <h2>Manual Note Input</h2>
+                <div class="note-input-group">
+                    <div class="form-group">
+                        <label for="instrument">Instrument:</label>
+                        <select id="instrument">
+                            <option value="guitar">Guitar</option>
+                            <option value="piano">Piano</option>
+                            <option value="bass">Bass</option>
+                            <option value="synth">Synth</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="note">Note:</label>
+                        <input type="text" id="note" placeholder="e.g., C4">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration (ms):</label>
+                        <input type="number" id="duration" placeholder="e.g., 250">
+                    </div>
+                    <div class="form-group">
+                        <label for="volume">Volume:</label>
+                        <input type="number" id="volume" step="0.1" min="0" max="1" value="0.5">
+                    </div>
+                    <button class="btn secondary" onclick="addNote()">Add Note</button>
+                </div>
+            </section>
 
-        <!-- Random Song Generator Button -->
-        <section>
-            <button class="btn" onclick="generateRandomSong()">Generate Random Song</button>
-        </section>
+            <!-- Section Management -->
+            <section class="config-section">
+                <h2>Section Management</h2>
+                <div class="section-input-group">
+                    <div class="form-group">
+                        <label for="sectionName">Section Name:</label>
+                        <input type="text" id="sectionName" placeholder="e.g., Verse">
+                    </div>
+                    <div class="form-group">
+                        <label for="repeat">Repeat Section:</label>
+                        <select id="repeat">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <button class="btn secondary" onclick="addSection()">Add Section</button>
+                </div>
+            </section>
+        </div>
 
-        <!-- Final JSON Download Button -->
-        <section>
-            <button class="btn" onclick="downloadJSON()">Download JSON</button>
-        </section>
+        <!-- Right Column: Preview -->
+        <div class="preview-container">
+            <!-- Notes Preview -->
+            <section class="preview-section">
+                <h2>Current Section Notes</h2>
+                <pre id="notesList" class="preview-content"></pre>
+            </section>
+
+            <!-- Sections Preview -->
+            <section class="preview-section">
+                <h2>All Sections</h2>
+                <pre id="sectionsList" class="preview-content"></pre>
+            </section>
+        </div>
     </main>
 
     <script src="script.js"></script>
