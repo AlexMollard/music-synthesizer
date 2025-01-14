@@ -49,37 +49,37 @@
             {
               "pitch": "G2",
               "duration": 3000,
-              "volume": 1
+              "volume": 0.1
             },
             {
               "pitch": "D3",
               "duration": 3000,
-              "volume": 1
+              "volume": 0.1
             },
             {
               "pitch": "B2",
               "duration": 3000,
-              "volume": 1
+              "volume": 0.1
             },
             {
               "pitch": "E3",
               "duration": 3000,
-              "volume": 1
+              "volume": 0.1
             },
             {
               "pitch": "C3",
               "duration": 3000,
-              "volume": 1
+              "volume": 0.1
             },
             {
               "pitch": "A2",
               "duration": 3000,
-              "volume": 1
+              "volume": 0.1
             }
           ]
         },
         {
-          "instrument": "xylophone",
+          "instrument": "synth",
           "notes": [
             {
               "pitch": "G5",

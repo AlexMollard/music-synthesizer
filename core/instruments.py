@@ -71,6 +71,19 @@ INSTRUMENTS_PARAMS = {
         'resonance_freq': [2400, 4800],
         'filter_q': 4.0
     },
+    'synth': {
+        'wave_type': ['sine', 'sine', 'sine'],
+        'wave_mix': [0.5, 0.3, 0.2],
+        'attack_ms': 10,
+        'decay_ms': 200,
+        'sustain_level': 0.5,
+        'release_ms': 300,
+        'octave_shift': 0,
+        'detune_cents': 5,
+        'harmonics': [1.0, 0.5, 0.25, 0.125],
+        'resonance_freq': [200],
+        'filter_q': 1.5
+    },
     'ambient': {
         'wave_type': ['sine', 'triangle', 'sine'],  # Added triangle wave for more warmth
         'wave_mix': [0.5, 0.3, 0.2],  # Increased low-frequency wave proportion
@@ -124,5 +137,6 @@ AVAILABLE_INSTRUMENTS = {
     'bongos': Instrument('bongos'),
     'claves': Instrument('claves'),
     'ambient': Instrument('ambient'),
-    'none': Instrument('none')
+    'none': Instrument('none'),
+    'synth': Instrument('synth')
 }
